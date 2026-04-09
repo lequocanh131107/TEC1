@@ -1,0 +1,18 @@
+{
+    "00AK": {
+        "icao": "00AK",
+        "iata": "",
+        "name": "Lowell Field",
+        "city": "Anchor Point",
+        "state": "Alaska",
+        "country": "US"
+    },
+    "LFLL": {
+        "icao": "LFLL",
+        "iata": "LYS",
+        "name": "Lyon Saint-Exupery Airport",
+        "city": "Lyon",
+        "state": "",
+        "country": "FR"
+    }
+}

@@ -1,38 +1,27 @@
-<<<<<<< HEAD
-import math
-pizzaDiameter1 = float(input("Enter the diameter of the first pizza in cm: "))
-pizzaPrice1 = float(input("Enter the price of the first pizza: "))
-pizzaDiameter2 = float(input("Enter the diameter of the second pizza in cm: "))
-pizzaPrice2 = float(input("Enter the price of the second pizza: "))
+class Elevator:
 
-Area1 = math.pi * (pizzaDiameter1 / 2) ** 2
-Area2 = math.pi * (pizzaDiameter2 / 2) ** 2
+    def __init__(self, bottom, top):
+        self.bottom = bottom
+        self.top = top
+        self.current = bottom
 
-ratio1 = Area1 / pizzaPrice1
-ratio2 = Area2 / pizzaPrice2
+    def go_to_floor(self, des_floor):
+        start = self.current
+        stop = des_floor
 
-if ratio1 > ratio2:
-    print("The first pizza offers better deal.")
-elif ratio2 > ratio1:
-    print("The second pizza offers better deal.")
-else:
-=======
-import math
-pizzaDiameter1 = float(input("Enter the diameter of the first pizza in cm: "))
-pizzaPrice1 = float(input("Enter the price of the first pizza: "))
-pizzaDiameter2 = float(input("Enter the diameter of the second pizza in cm: "))
-pizzaPrice2 = float(input("Enter the price of the second pizza: "))
+    for i in range(start, stop):
+        self.floor_up()
 
-Area1 = math.pi * (pizzaDiameter1 / 2) ** 2
-Area2 = math.pi * (pizzaDiameter2 / 2) ** 2
+    while(self.current > self.bottom):
+        self.floor_down()
 
-ratio1 = Area1 / pizzaPrice1
-ratio2 = Area2 / pizzaPrice2
+    def floor_up(self):
+        self.current += 1
+        print(self.current)
 
-if ratio1 > ratio2:
-    print("The first pizza offers better deal.")
-elif ratio2 > ratio1:
-    print("The second pizza offers better deal.")
-else:
->>>>>>> 26e297e939b2fb547af87325b46d2e333a93b1f7
-    print("Both pizzas offer the same deal.")
+    def floor_down(self):
+        self.current -= 1
+        print (self.current)
+
+h = Elevator(1, 10)
+h.go_to_floor(5)

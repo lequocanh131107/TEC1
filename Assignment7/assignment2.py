@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class Car:
 # được gợi ý đổi car thành self nên ass2 em sẽ đổi car thành self
     def __init__(self, biensoxe, tocdotoida):
@@ -27,34 +27,4 @@ print("Current speed:", car.current_speed)
 
 car.accelerate(-200)
 
-=======
-class Car:
-# được gợi ý đổi car thành self nên ass2 em sẽ đổi car thành self
-    def __init__(self, biensoxe, tocdotoida):
-        self.biensoxe = biensoxe
-        self.max_speed = tocdotoida
-        self.current_speed = 0
-        self.khoangcachdiduoc = 0
-
-    def accelerate(self, change):
-        self.current_speed = self.current_speed + change
-
-        if self.current_speed > self.max_speed:
-            self.current_speed = self.max_speed
-
-        if self.current_speed < 0:
-           self.current_speed = 0
-
-
-car = Car("ABC-123", 142)
-
-car.accelerate(30)
-car.accelerate(70)
-car.accelerate(50)
-
-print("Current speed:", car.current_speed)
-
-car.accelerate(-200)
-
->>>>>>> 26e297e939b2fb547af87325b46d2e333a93b1f7
 print("Final speed:", car.current_speed)

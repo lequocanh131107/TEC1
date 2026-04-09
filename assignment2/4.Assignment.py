@@ -1,16 +1,13 @@
-<<<<<<< HEAD
-year = int(input("Enter a year: "))
-if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-        print(year, "is a leap year")
-else:
-        print(year, "is not a leap year")
+class ScoreBoard:
+    
+  
+    def __init__(self, score):
+       
+        self.__score = score 
 
-=======
-year = int(input("Enter a year: "))
-if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-        print(year, "is a leap year")
-else:
-        print(year, "is not a leap year")
+    def get_score(self):
+        return self.__score
 
+s1 = ScoreBoard(0)
 
->>>>>>> 26e297e939b2fb547af87325b46d2e333a93b1f7
+print( s1.get_score())
